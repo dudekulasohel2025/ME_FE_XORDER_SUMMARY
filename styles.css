@@ -1,0 +1,378 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+
+/* ================================
+   CSS Variables
+================================ */
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --hover-blue: hsl(245, 83%, 68%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+  --white: hsl(0, 0%, 100%);
+
+  --card-radius: 20px;
+}
+
+/* ================================
+   Reset
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  padding: 24px;
+
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+
+  background-color: var(--pale-blue);
+  background-image: url("./images/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ================================
+   Main page layout
+================================ */
+.page-container {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ================================
+   Order card
+================================ */
+.order-card {
+  width: 100%;
+  max-width: 450px;
+
+  background-color: var(--white);
+  border-radius: var(--card-radius);
+  overflow: hidden;
+
+  box-shadow: 0 24px 45px rgba(56, 42, 225, 0.15);
+}
+
+/* ================================
+   Hero image
+================================ */
+.hero-image-container {
+  width: 100%;
+}
+
+.hero-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ================================
+   Card content
+================================ */
+.card-content {
+  padding: 44px 48px 48px;
+  text-align: center;
+}
+
+.heading {
+  margin-bottom: 18px;
+
+  color: var(--dark-blue);
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.summary-para {
+  max-width: 355px;
+  margin: 0 auto 24px;
+
+  color: var(--desaturated-blue);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.65;
+}
+
+/* Plan section */
+.plan-details {
+  width: 100%;
+  margin-bottom: 50px;
+  padding: 0 30px;
+
+  background: transparent;
+  border-radius: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.plan-info {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.music-icon {
+  width: 24px;
+  min-width: 24px;
+  height: 24px;
+}
+
+.music-icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.plan-text {
+  text-align: left;
+}
+
+.plan-text > h3 {
+  margin-bottom: 4px;
+
+  color: #000;
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.plan-text > p {
+  color: #000;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.3;
+  text-decoration: line-through;
+}
+
+.change-link > a {
+  color: #3829e0;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: underline;
+
+  transition: color 0.3s ease;
+}
+
+.change-link > a:hover {
+  color: #766cf1;
+}
+
+
+/* Proceed button */
+.proceed-btn {
+  width: 100%;
+  min-height: 45px;
+  margin-bottom: 30px;
+  padding: 12px 20px;
+
+  color: #fff;
+  background-color: #3829e0;
+
+  border: 0;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+
+  cursor: pointer;
+
+  box-shadow: 0 12px 20px rgba(56, 41, 224, 0.22);
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.proceed-btn:hover {
+  background-color: #766cf1;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 18px rgba(56, 41, 224, 0.18);
+}
+
+/* Cancel button */
+.cancel-order {
+  padding: 5px 10px;
+
+  color: #7280a7;
+  background: transparent;
+  border: none;
+
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: color 0.3s ease;
+}
+
+.cancel-order:hover {
+  color: #1f2f56;
+}
+
+/* ================================
+   Accessibility focus
+================================ */
+.proceed-btn:focus-visible,
+.cancel-order:focus-visible,
+.change-link > a:focus-visible {
+  outline: 3px solid rgba(56, 42, 225, 0.35);
+  outline-offset: 4px;
+}
+
+/* ================================
+   Footer
+================================ */
+.attribution {
+  margin-top: 28px;
+
+  color: var(--desaturated-blue);
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--bright-blue);
+  font-weight: 700;
+}
+
+/* ================================
+   Tablet and mobile
+================================ */
+@media screen and (max-width: 600px) {
+  body {
+    padding: 24px;
+
+    background-image: url("./images/pattern-background-mobile.svg");
+    background-size: 100% auto;
+  }
+
+  .order-card {
+    max-width: 375px;
+    border-radius: 20px;
+  }
+
+  .card-content {
+    padding: 32px 24px 34px;
+  }
+
+  .heading {
+    margin-bottom: 16px;
+    font-size: 23px;
+  }
+
+  .summary-para {
+    margin-bottom: 24px;
+    padding: 0 4px;
+
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .plan-details {
+    margin-bottom: 40px;
+    padding: 0 10px;
+    gap: 12px;
+  }
+
+  .plan-info {
+    gap: 16px;
+  }
+
+  .music-icon {
+    width: 42px;
+    min-width: 42px;
+    height: 42px;
+  }
+
+  .plan-text > h3 {
+    font-size: 16px;
+  }
+
+  .plan-text > p {
+    font-size: 14px;
+  }
+
+  .change-link > a {
+    font-size: 13px;
+  }
+
+  .proceed-btn {
+    margin-bottom: 24px;
+    font-size: 14px;
+  }
+
+  .cancel-order {
+    font-size: 15px;
+  }
+
+}
+
+/* ================================
+   Small mobile devices
+================================ */
+@media screen and (max-width: 360px) {
+    body {
+      padding: 16px;
+    }
+  
+    .card-content {
+      padding: 28px 18px 30px;
+    }
+  
+    .plan-details {
+      padding: 0 6px;
+      gap: 8px;
+    }
+  
+    .plan-info {
+      gap: 12px;
+    }
+  
+    .music-icon {
+      width: 42px;
+      min-width: 42px;
+      height: 42px;
+    }
+  
+    .plan-text > h3 {
+      font-size: 14px;
+    }
+  
+    .plan-text > p {
+      font-size: 13px;
+    }
+  
+    .change-link > a {
+      font-size: 12px;
+    }
+  }
